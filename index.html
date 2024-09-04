@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function displayMe(){
+            var text = document.getElementById('text').value;
+            var text1 = document.getElementById('grade1').value;
+            var text2 = document.getElementById('grade2').value;
+            var text3 = document.getElementById('grade3').value;
+            var text4 = document.getElementById('grade4').value;
+            var text5 = document.getElementById('grade5').value;
+
+            var total = Number(text1) + Number(text2) + Number(text3) + Number(text4) + Number(text5);
+            var totalAverage = parseFloat(total) / 5;
+            alert ("Name: " + text + "\n" + "IP1: " + text1 + "\n" + "IM1: " + text2 + "\n" + "OOP: " + text3 + "\n" + "EDP: " + text4 + "\n" + "HC2: " + text5 + "\n" + totalAverage)
+        }
+    </script>
+<body>
+    
+    <b>Name</b>
+    <input type="string" id="text">
+    <h3>GRADE:</h3>
+    <b>IP1:</b>
+    <input type="number" id="grade1"><br><br>
+    <b>IM1:</b>
+    <input type="number" id="grade2"><br><br>
+    <b>OOP:</b>
+    <input type="number" id="grade3"><br><br>
+    <b>EDP:</b>
+    <input type="number" id="grade4"><br><br>
+    <b>HC2:</b>
+    <input type="number" id="grade5"><br><br>
+
+    <button onclick="displayMe()">Compute</button>
+
+</body>
+</html>
